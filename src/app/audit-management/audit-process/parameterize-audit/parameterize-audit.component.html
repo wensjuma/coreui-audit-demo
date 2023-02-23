@@ -1,0 +1,98 @@
+<div class="main-content">
+  <div class="container-fluid p-3">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title text-center p-1">
+              Audit Product Parameters
+              <span class="text-primary">{{ _data["Company_name"] }}</span>
+            </h4>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Parameter Name</label>
+                    <input type="text" class="form-control" formControlName="Parameter_Name" id="formGroupExampleInput"
+                      placeholder="Parameter Name" />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Parameter Type</label>
+                    <select type="text" class="form-control" formControlName="Parameter_Type" id="formGroupExampleInput"
+                      placeholder="Parameter Type">
+                      <option value="">Laboratory</option>
+                      <option value="">Observation</option>
+                      <option value="">Others</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Result</label>
+                    <select type="text" class="form-control" formControlName="Result" id="formGroupExampleInput"
+                      placeholder="Result">
+                      <option value="v_good">very Good</option>
+                      <option value="good">Good</option>
+                      <option value="average">Average</option>
+                      <option value="Bad">Bad</option>
+                      <option value="v_bad">Very Bad</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Lab Results</label>
+                    <select type="text" class="form-control" formControlName="Lab_Result" id="formGroupExampleInput"
+                      placeholder="Lab Results">
+                      <option value="Compliant">Compliant</option>
+                      <option value="Non-Compliant">Non-Compliant</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Parameter Description</label>
+                    <textarea class="form-control" formControlName="Parameter_Description"
+                      id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Inspection Remarks
+                    </label>
+                    <textarea class="form-control" formControlName="Inpection_Remarks" id="exampleFormControlTextarea1"
+                      rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Lab Remarks
+                    </label>
+                    <textarea class="form-control" formControlName="Lab_Remarks" id="exampleFormControlTextarea1"
+                      rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <hr />
+              <button type="submit" [disabled]="form.valid" (click)="auditSubmit()" class="btn btn-primary pull-right">
+                Submit
+              </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

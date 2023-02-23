@@ -1,0 +1,126 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-info">
+        <h4 class="card-title">COMPANIES AUDIT DETAILS</h4>
+        <button  [disabled]="details['Inspection_finding'] !== 'Incomplete'" (click)="audit(details)" class="btn btn-info pull-right">
+          <span *ngIf="details['Inspection_finding'] == 'Compliant'" class="fa fa-check-circle"> Compliant</span> 
+          <span *ngIf="details['Inspection_finding'] == 'Non-Compliant'" class="fa fa-ban"> Non-Compliant </span> 
+          <span *ngIf="details['Inspection_finding'] == 'Incomplete'" class="fa fa-exchange"> Audit</span> 
+         </button>
+        <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Company</button> -->
+        <p class="card-category">Registered companies Audit details</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-borderless table-responsive">
+            <thead class="text-primary">
+              <!-- <th>REF.ID</th> -->
+              <th>KEY</th>
+              <th>Details</th>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="key">Company Name</td>
+                <td>{{ details["Company_name"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Location</td>
+                <td>{{ details["Company_Location"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Date Opened</td>
+                <td>{{ details["Date_opened"] }}</td>
+              </tr>
+
+              <tr>
+                <td class="key">Opened By</td>
+                <td>{{ details["Opened_By"] }}</td>
+              </tr>
+
+              <tr>
+                <td class="key">Audit Type</td>
+                <td>{{ details["Type_of_audit"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Compliant Nature</td>
+                <td>{{ details["Nature_of_complaint"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Inspector Incharge</td>
+                <td>{{ details["Inspector_Assigned"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Inspection Date</td>
+                <td class="text-warning">{{ details["Inspection_Date"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Scheduled date</td>
+                <td class="text-danger">
+                  {{ details["Scheduled_inspection_date"] }}
+                </td>
+              </tr>
+              <tr>
+                <td class="key">Findings</td>
+              <td>
+                <i *ngIf="details['Inspection_finding'] == 'Non-Compliant'" class="text-danger">
+                  Non Compliant</i>
+                <i *ngIf="details['Inspection_finding'] == 'Compliant'" class="text-success">Compliant</i>
+                <i *ngIf="details['Inspection_finding'] == 'Incomplete'" class="text-primary">Incomplete</i>
+              </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-info">
+                      <h4 class="card-title">Audit Parameters</h4>
+                      <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Add Parameter</button> -->
+                      <!-- <p class="card-category">Registered companies for auditing </p> -->
+                    
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <!-- <th>REF.ID</th> -->
+                                  <th>Parameter Name</th>
+                                  <th>Parameter Type</th>
+                                  <th>Parameter Description</th>
+                                  <th>Result</th>
+                                  <th>Lab_Result</th>
+                                  <th>Lab_Remarks</th>
+                                  <th>Inpection_Remarks</th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of myDetails">
+                                      <!-- <td>1</td> -->
+                                      <td>{{item['Parameter_Name']}}</td>
+                                      <td>{{item['Parameter_Type']}}</td>
+                                      <td>{{item['Parameter_Description']}}</td>
+                                      <td class="text-success">{{item['Result']}}</td>
+                                      <td>{{item['Lab_Result']}}</td>
+                                      <td>{{item['Lab_Remarks']}}</td>
+                                      <td>{{item['Inpection_Remarks']}}</td>
+                                      
+                                  </tr>                              
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>

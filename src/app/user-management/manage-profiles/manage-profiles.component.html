@@ -1,0 +1,46 @@
+<div class="main-content">
+    <div class="container-fluid">
+ 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">Profiles</h4>
+                        &nbsp; &nbsp;&nbsp; <button (click)="openCreate()" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Profile</button>
+                        <button [routerLink]="['/users/roles']" class="btn btn-danger pull-left"><i class="fa fa-tasks"></i> Go to Roles</button>&nbsp; &nbsp;&nbsp;
+                      
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <!-- <th>REF.ID</th> -->
+                                    <th>Profile Name</th>
+                                    <th>Profile Description</th>
+                                    <th>No. of users</th>
+                                    <th>Actions</th>
+                                </thead>
+                                <tbody>
+                                    
+                                   
+                                    <tr *ngFor="let item of profileDetails">
+                                        <!-- <td>2</td> -->
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.description}}</td>
+                                        <td>{{item.users}}</td>
+                                        <td>
+                                          <span (click)="view(item)" class="fa fa-eye text-primary"></span> &nbsp; &nbsp;
+                                          <span (click)="edit(item)" class="fa fa-pencil-square text-info"></span> &nbsp; &nbsp;
+                                            <span (click)="deleteItem(item)" class="fa fa-trash-o text-danger"></span></td>
+                                    </tr>
+                                
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

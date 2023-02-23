@@ -1,0 +1,68 @@
+
+      <!-- <div class="row">
+          <div class="col-md-6">
+              <button (click)="openProfilesPage()" class="btn btn-block btn-primary"><i class="fa fa-users"></i>&nbsp; &nbsp; &nbsp;  Audited Firms</button>
+          </div>
+          <div class="col-md-6">
+              <button (click)="openRolesPage()" class="btn btn-block btn-primary"><i class="fa fa-profile-card"></i> &nbsp; &nbsp; &nbsp; Pending Audit</button>
+          </div>
+      </div> -->
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-info">
+                      <h4 class="card-title">COMPANIES PENDING AUDIT</h4>
+                      <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Company</button> -->
+                      <p class="card-category">Registered companies for auditing </p>
+                    
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <!-- <th>REF.ID</th> -->
+                                  <th>Open Date</th>
+                                  <!-- <th>Opened By</th> -->
+                                  <th>Company Name</th>
+                                  <th>Location</th>
+                                  <!-- <th>Audit Type</th> -->
+                                  <!-- <th>Nature of Compliant</th> -->
+                                  <th>Inspector Assigned</th>
+                                  <th>Inspection Date</th>
+                                  <th>Scheduled inspection</th>
+                                  <th>Fidings</th>
+                                  <th>Action</th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of companiesDetails">
+                           
+                                      <td>{{item["Date_opened"]}}</td>
+                                      <!-- <td>{{item['Opened_By']}}</td> -->
+                                      <td>{{item['Company_name']}}</td>
+                                      <td>{{item['Company_Location']}}</td>
+                                      <!-- <td>{{item['Type_of_audit']}}</td> -->
+                                      <!-- <td>{{item['Nature_of_complaint']}}</td> -->
+                                      <td>{{item['Inspector_Assigned']}}</td>
+                                      <td class="text-warning">{{item['Inspection_Date']}}</td>
+                                      <td class="text-danger">{{item['Scheduled_inspection_date']}}</td>
+                                      <td>
+                                        <i *ngIf="item['Inspection_finding'] == 'Non-Compliant'" class="text-danger"> Non Compliant</i>
+                                        <i *ngIf="item['Inspection_finding'] == 'Compliant'" class="text-success">Compliant</i>
+                                        <i *ngIf="item['Inspection_finding'] == 'Incomplete'"class="text-primary">Incomplete</i>                                     
+                                      <td>
+                                        <!-- <span class="fa fa-eye"></span> -->
+                                        <!-- <span class="fa fa-pencil-square"></span> -->
+                                        <span (click)="viewAudit(item)" class="fa fa-1x fa-th-list text-primary"></span>
+                                        <!-- <span>
+                                          <button (click)="startAudit(item)" class="btn btn-sm btn-primary text-white">audit</button>
+                                        </span> -->
+                                      </td>
+                                  </tr>                              
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>

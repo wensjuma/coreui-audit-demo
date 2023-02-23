@@ -1,0 +1,42 @@
+<div class="main-content">
+  <div class="container">
+    <h4 class="card-title text-center p-3">Create Profile</h4>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card" style="margin:10px !important">
+            
+                  <div class="card-body">
+                      <form [formGroup]="formGroup">
+                          <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Profile Name</label>
+                                  <input type="text" class="form-control" formControlName="name" id="formGroupExampleInput" placeholder="Profile Name">
+                                </div>
+                              </div>
+                            
+                          </div>
+                          <br>                        
+                          <div class="row">
+                         
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="exampleFormControlTextarea1">Remarks</label>
+                                  <textarea formControlName="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                              
+                              </div>
+                          </div>
+                          <br>
+                          <hr>
+                          <button  *ngIf="!data" type="submit" class="btn btn-primary pull-right">Submit</button>
+                          <button *ngIf="data" type="submit" class="btn btn-primary pull-right">Update</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      
+      </div>
+  </div>
+</div>

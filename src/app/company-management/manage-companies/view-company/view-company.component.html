@@ -1,0 +1,153 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-info">
+        <h4 class="card-title">COMPANIES AUDIT DETAILS</h4>
+        <button  (click)="scheduleAudit(details)" class="btn btn-info pull-right">
+          <i class="fa fa-calendar"></i>
+           Schedule Audit 
+         </button>
+        <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Company</button> -->
+        <p class="card-category">Registered company details</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-borderless table-responsive">
+            <thead class="text-primary">
+              <!-- <th>REF.ID</th> -->
+              <th>KEY</th>
+              <th>Details</th>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="key">Company Name</td>
+                <td>{{ details["Company_name"] }}</td>
+              </tr>
+
+              <tr>
+                <td class="key">Company Reg No</td>
+                <td>{{ details["company_reg"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Location</td>
+                <td>{{ details["location"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Date Registered</td>
+                <td>{{ details["reg_date"] }}</td>
+              </tr>
+
+              <tr>
+                <td class="key">Contact Phone</td>
+                <td>{{ details["contact"] }}</td>
+              </tr>
+        
+              <tr>
+                <td class="key">Email</td>
+                <td>{{ details["email"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">Address</td>
+                <td>{{ details["address"] }}</td>
+              </tr>
+              <tr>
+                <td class="key">KRA PIN</td>
+                <td>{{ details["kra_pin"] }}</td>
+              </tr>
+              
+             
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="row">
+          <div class="col-md-12">
+
+            <mat-tab-group>
+              <mat-tab label="Recent Audits">
+                <div class="card">
+                  <div class="card-header card-header-info">
+                      <h4 class="card-title">Audit Parameters</h4>
+                      <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Add Parameter</button> -->
+                      <!-- <p class="card-category">Registered companies for auditing </p> -->
+                    
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <!-- <th>REF.ID</th> -->
+                                  <th>Audit Date</th>  
+                                   <th>Audited by</th>
+                                  <th>Results</th>
+                                 
+                                  
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of auditDetails">
+                                      <!-- <td>1</td> -->
+                                      <td>{{item['Inspection_Date']}}</td>
+                                      <td>{{item['Inspector_Assigned']}}</td>
+                                      <td>{{item['Inspection_finding']}}</td>
+                                      
+                                     
+                                      
+                                  </tr>                              
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              </mat-tab>
+              <mat-tab label="Complains"> 
+                <div class="card">
+                  <div class="card-header card-header-info">
+                      <h4 class="card-title">Audit Parameters</h4>
+                      <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Add Parameter</button> -->
+                      <!-- <p class="card-category">Registered companies for auditing </p> -->
+                    
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <!-- <th>REF.ID</th> -->
+                                  <th>Complain Date</th>  
+                                   <th>Complain Statement</th>
+                                  <th>Complainer</th>
+                                  <th>Priority</th>
+                                  
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of complains">
+                                      <!-- <td>1</td> -->
+                                      <td>{{item['date']}}</td>
+                                      <td>{{item['statement']}}</td>
+                                      <td>{{item['complainer']}}</td>
+                                      <td>{{item['priority']}}</td>
+                                     
+                                      
+                                  </tr>                              
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+              </mat-tab>
+            
+            </mat-tab-group>
+            
+
+            
+          </div>
+      </div>

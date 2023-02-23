@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- <div class="row">
+            <div class="col-md-6">
+                <button (click)="openProfilesPage()" class="btn btn-block btn-primary"><i class="fa fa-users"></i>&nbsp; &nbsp; &nbsp;  Audited Firms</button>
+            </div>
+            <div class="col-md-6">
+                <button (click)="openRolesPage()" class="btn btn-block btn-primary"><i class="fa fa-profile-card"></i> &nbsp; &nbsp; &nbsp; Pending Audit</button>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-info">
+                        <h4 class="card-title">REGISTERED COMPANIES</h4>
+                        <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Company</button>
+                        <p class="card-category">Registered companies for auditing </p>
+                      
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <!-- <th>REF.ID</th> -->
+                                    <th>Name</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Reg Date</th>
+                                    <th>Location</th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of companiesDetails">
+                                        <!-- <td>1</td> -->
+                                        <td>{{item['name']}}</td>
+                                        <td>{{item['contact']}}</td>
+                                        <td>{{item['email']}}</td>
+                                        <td class="text-primary">{{item['reg_date']}}</td>
+                                        <td>{{item['location']}}</td>
+                                        <td>
+                                          <span (click)="view(item)" class="fa fa-eye"></span>
+                                          <span (click)="openEdit(item)" class="fa fa-pencil-square"></span>
+                                          <span class="fa fa-trash"></span>
+                                        </td>
+                                    </tr>                              
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

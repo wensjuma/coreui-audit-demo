@@ -1,0 +1,84 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">{{formDetails? 'Edit User' :'Create User'}}</h4>
+                  </div>
+                  <div class="card-body">
+                      <form [formGroup]="form" >
+                          <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Company Name</label>
+                                  <input type="text" class="form-control" formControlName="Company_name" id="formGroupExampleInput" placeholder="Company Name">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Company Reg.No</label>
+                                  <input type="text" class="form-control" formControlName="reg_no" id="formGroupExampleInput" placeholder="Company Reg.No">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Location</label>
+                                  <input type="text" class="form-control" formControlName="Company_Location"  placeholder="Location">
+                                </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Address </label>
+                                  <input type="text" class="form-control" formControlName="address" id="formGroupExampleInput" placeholder="Address">
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Company Email</label>
+                                  <input type="text" class="form-control" formControlName="email" id="formGroupExampleInput" placeholder="Company Email">
+                                </div>
+                              </div>
+                     
+                          </div>
+                          <br>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label for="formGroupExampleInput">Contact Phone</label>
+                                <input type="text" class="form-control" formControlName="contact" id="formGroupExampleInput" placeholder="Contact Phone">
+                              </div>
+                            </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label for="formGroupExampleInput">Reg. Date</label>
+                                  <input type="text" formControlName="reg_date" class="form-control" id="formGroupExampleInput" placeholder="Phone number">
+                                </div>
+                              </div>
+                            
+                          </div>
+                        
+                          <div class="row">
+                          
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="exampleFormControlTextarea1">Company Description</label>
+                                  <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                              
+                              </div>
+                          </div>
+                         
+                          <hr>
+                          <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      
+      </div>
+  </div>
+</div>
