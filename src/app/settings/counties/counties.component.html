@@ -1,0 +1,41 @@
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header card-header-info">
+              <h4 class="card-title">Counties</h4>
+              <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Configure County</button>
+              <p class="card-category">Configured counties </p>
+            
+          </div>
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead class="text-primary">
+                          <!-- <th>REF.ID</th> -->
+                          <th>Code</th>
+                          <th>Name</th>
+                          <th>Action</th>
+                          
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let item of counties">
+                              <!-- <td>1</td> -->
+                              <td>{{item['code']}}</td>
+                              <td>{{item['name']}}</td>
+                              <td>
+                                <span (click)="view(item)" class="fa fa-eye"></span>
+                                <span (click)="openEdit(item)" class="fa fa-pencil-square"></span>
+                                <span class="fa fa-trash"></span>
+                              </td>
+                             
+                              
+                          </tr>                              
+                        
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { complains } from 'src/app/audit-management/audit-details.data';
 import { auditDetails } from '../../../audit-management/audit-details.data';
+import { MatDialog } from '@angular/material/dialog';
+import { ScheduleAuditComponent } from '../schedule-audit/schedule-audit.component';
 
 @Component({
   selector: 'app-view-company',
@@ -11,8 +13,10 @@ export class ViewCompanyComponent implements OnInit {
   details: any;
   complains =  complains;
   auditDetails: any;
-  constructor() {
-    this.details = JSON.parse(localStorage.getItem('companyDetails')!); 
+  constructor(
+    private dialog: MatDialog
+  ) {
+    this.details = JSON.parse(localStorage.getItem('companyDetails')!);
    }
 
   ngOnInit(): void {
@@ -20,7 +24,10 @@ export class ViewCompanyComponent implements OnInit {
 
   }
   scheduleAudit(item: any){
-
+    this.dialog.open(ScheduleAuditComponent,{
+      width:"450px",
+      data:item
+    })
   }
 
 }

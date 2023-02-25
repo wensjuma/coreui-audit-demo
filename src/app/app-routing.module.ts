@@ -40,7 +40,29 @@ const routes: Routes = [
         loadChildren: () =>
           import('./audit-management/audit-management.module').then((m) => m.AuditManagementModule)
       },
-     
+
+
+      {
+        path: 'management',
+        loadChildren: () =>
+          import('./management/management.module').then((m) => m.ManagementModule)
+      },
+      {
+        path: 'relations',
+        loadChildren: () =>
+          import('./customer-relations/customer-relations.module').then((m) => m.CustomerRelationsModule)
+      },
+      {
+        path: 'reports',
+        loadChildren: () =>
+          import('./reports/reports.module').then((m) => m.ReportsModule)
+      },
+      {
+        path: 'settings',
+        loadChildren: () =>
+          import('./settings/settings.module').then((m) => m.SettingsModule)
+      },
+
     ]
   },
   {

@@ -290,3 +290,49 @@ export const complains = [
     priority:'low'
   },
 ]
+
+export const feedback =[
+ { 
+
+  "date":"09-02-2023",
+  "comment": "Quality and verified products",
+  "customer": "Maxwell Olim",
+  "email": 'bakary@gmail.com',
+  "company": "Jumbo Millers LTD"
+},
+ { 
+  "date":"12-02-2023",
+  "comment": "Happy clients great feedback",
+  "customer": "Benjamin Mk",
+  "email": 'maxolim@gmail.com',
+  "company": "Cubic holdings"
+ 
+  
+},
+ { 
+  "date":"19-02-2023",
+  "comment": "Fullfilled descriptions",
+  "customer": "Markos Lawd",
+  "email": 'maxolim@gmail.com',
+  "company": "Simmers Ventures LTD"
+}
+]
+ 
+export const counties =[
+  {
+    name: 'Nairobi',
+    code: '047'
+  },
+  {
+    name: 'Mombasa',
+    code: '001'
+  },
+  {
+    name: 'Kakamega',
+    code: '037'
+  },
+  {
+    name: 'Kiambu',
+    code: '007'
+  },
+]

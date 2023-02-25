@@ -6,13 +6,15 @@ import { SharedModule } from '../shared/shared.module';
 import { ManageCompaniesComponent } from './manage-companies/manage-companies.component';
 import { CreateCompanyComponent } from './manage-companies/create-company/create-company.component';
 import { ViewCompanyComponent } from './manage-companies/view-company/view-company.component';
+import { ScheduleAuditComponent } from './manage-companies/schedule-audit/schedule-audit.component';
 
 
 @NgModule({
   declarations: [
     ManageCompaniesComponent,
     CreateCompanyComponent,
-    ViewCompanyComponent
+    ViewCompanyComponent,
+    ScheduleAuditComponent
   ],
   imports: [
     CommonModule,

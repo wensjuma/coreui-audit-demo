@@ -10,7 +10,7 @@ export const navItems: INavData[] = [
     //   text: 'NEW'
     // }
   },
- 
+
   {
     name: 'User Management',
     url: '/base',
@@ -26,6 +26,10 @@ export const navItems: INavData[] = [
       },
       {
         name: 'Personell',
+        url: '/users/manage'
+      },
+      {
+        name: 'Profiles',
         url: '/users/profiles'
       },
     ]
@@ -52,5 +56,84 @@ export const navItems: INavData[] = [
       }
     ]
   },
-  
+  {
+    name: 'Customer Relations',
+    url: '/base',
+    iconComponent: { name: 'cil-cursor' },
+    children: [
+      {
+        name: 'Feedbacks',
+        url: '/relations/feedback'
+      },
+      {
+        name: 'Surveys',
+        url: '/relations/surveys'
+      },
+      {
+        name: 'Complains',
+        url: '/relations/complains'
+      }
+    ]
+  },
+  {
+    name: 'Management',
+    url: '/base',
+    iconComponent: { name: 'cil-calculator' },
+    children: [
+      {
+        name: 'Management minutes',
+        url: '/management/minutes'
+      },
+      {
+        name: ' Management findings',
+        url: '/management/findings'
+      },
+      {
+        name: 'Risk Analysis',
+        url: '/management/risk'
+      }
+    ]
+  },
+  {
+    name: 'Reports',
+    url: '/base',
+    iconComponent: { name: 'cil-puzzle' },
+    children: [
+      {
+        name: 'Compliance Audits',
+        url: '/reports/c-audits'
+      },
+      {
+        name: 'Activity Audit reports',
+        url: '/reports/activity-audit'
+      },
+      {
+        name: 'Survey Analysis',
+        url: '/reports/survey/analysis'
+      }
+    ]
+  },
+  {
+    name: 'Settings',
+    url: '/base',
+    iconComponent: { name: 'cil-settings' },
+    children: [
+      {
+        name: 'Parameters',
+        url: '/settings/audit-params'
+      },
+      {
+        name: 'Counties',
+        url: '/settings/counties'
+      },
+      {
+        name: 'Towns',
+        url: '/settings/towns'
+      },
+      {
+        name: 'Notifications',
+        url: '/settings/notifications'
+      }
+    ]
+  }
 ];

@@ -1,0 +1,51 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <!-- <div class="row">
+          <div class="col-md-6">
+              <button (click)="openProfilesPage()" class="btn btn-block btn-primary"><i class="fa fa-users"></i>&nbsp; &nbsp; &nbsp;  Audited Firms</button>
+          </div>
+          <div class="col-md-6">
+              <button (click)="openRolesPage()" class="btn btn-block btn-primary"><i class="fa fa-profile-card"></i> &nbsp; &nbsp; &nbsp; Pending Audit</button>
+          </div>
+      </div> -->
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-info">
+                      <h4 class="card-title">CUSTOMER FEEDBACK</h4>
+                      <!-- <button [routerLink]="'/companies/create-company'" class="btn btn-danger pull-right"><i class="fa fa-plus"></i> Create Company</button> -->
+                      <p class="card-category">Feedback details</p>
+                    
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class="text-primary">
+                                  <!-- <th>REF.ID</th> -->
+                                  <th>Date</th>
+                                  <th>Comment</th>
+                                  <th>Email</th>
+                                  <th>Company</th>
+                            
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of feedbackDetails">
+                                      <!-- <td>1</td> -->
+                                      <td class="text-primary">{{item['date']}}</td>
+                                  
+                                      <td>{{item['comment']}}</td>
+                                      <td>{{item['email']}}</td>
+                                      
+                                      <td>{{item['company']}}</td>
+              
+                                  </tr>                              
+                                
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
